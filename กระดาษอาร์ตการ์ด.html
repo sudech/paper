@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>จำหน่ายกระดาษ</title>
+  <style>
+    /* ==== โหลดฟอนต์จากเครื่อง ==== */
+    @font-face {
+      font-family: 'LocalFont';
+      src: url('font/SOV_Nophamas.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'LocalFont', Tahoma, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+
+    /* ==== หัวข้อ ==== */
+    header {
+      text-align: center;
+      color: white;
+      padding: 30px 20px;
+      font-size: 280%;
+      font-weight: bold;
+      background: url('image/had.png') no-repeat center center;
+      background-size: cover;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      border-bottom: 4px solid #007bb5;
+    }
+
+    /* ==== เมนู ==== */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #009acd;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 3%;
+      font-size: 50%;
+      background: #007bb5;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #005f8a;
+    }
+
+    /* ==== พื้นที่สินค้า ==== */
+    .product-section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h2 {
+      margin: 0 0 10px;
+      color: #007bb5;
+    }
+
+    .product-info p {
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #007bb5;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      display: inline-block;
+      background: #009acd;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .read-more:hover {
+      background: #007bb5;
+    }
+
+    /* ==== footer ==== */
+    footer {
+      background: #009acd;
+      color: white;
+      text-align: left;
+      padding: 20px 40px;
+      margin-top: 30px;
+      font-size: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #ffff66;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ==== ปุ่มไลน์ป๊อปอัป ==== */
+    #line-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00c300;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      z-index: 999;
+    }
+
+    #line-popup:hover {
+      transform: scale(1.1);
+      background: #00a000;
+    }
+
+    #line-popup img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ==== หัวข้อและเมนู ==== -->
+  <header>B&M Paper</header>
+
+  <nav>
+    <a href="Index.html">โฮม</a>  
+    <a href="กล่องแป้งหลังเทา.html">กล่องแป้งหลังเทา</a>
+    <a href="อื่นๆ.html">อื่นๆ</a>
+  </nav>
+
+ <style>
+  .centered-text {
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    font-size: 30px; /* ปรับขนาดตัวอักษร */
+    color: blue; /* เปลี่ยนสีข้อความ */
+  }
+</style>
+<div class="centered-text"><p>
+    กระดาษอาร์ต
+  </p></div>
+ 
+  <!-- ==== สินค้า ==== -->
+  <div class="product-section">
+
+    <div class="product">
+      <img src="image/gas.jpg" alt="กระดาษอาร์ตการ์ด">        
+      <div class="product-info">
+        <h2>กระดาษอาร์ตการ์ด 1 หน้า</h2>
+        <p>กระดาษอาร์ตการ์ดเนื้อแน่น มันวาว 1 ด้าน เหมาะสำหรับงานพิมพ์คุณภาพสูง เช่น โปสเตอร์ กล่องสินค้า หรือบรรจุภัณฑ์ที่ต้องการความหรูหรา...</p>
+        <div class="price">ราคาเริ่มต้น: 250 บาท / รีม</div>
+        <a class="read-more" href="รายละเอียดอาร์ตการ์ด.html">อ่านต่อ</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="image/gas.jpg" alt="กระดาษกล่องแป้งหลังเทา">
+      <div class="product-info">
+        <h2>กระดาษกล่องแป้งหลังเทา</h2>
+        <p>กระดาษกล่องแป้งหลังเทา เหมาะสำหรับงานผลิตกล่องทั่วไป เช่น กล่องสบู่ กล่องขนม หรือบรรจุภัณฑ์อื่น ๆ เนื้อแน่น แข็งแรง รีไซเคิลง่าย...</p>
+        <div class="price">ราคาเริ่มต้น: 180 บาท / กก.</div>
+        <a class="read-more" href="รายละเอียดหลังเทา.html">อ่านต่อ</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="image/gas.jpg" alt="กระดาษ A4">
+      <div class="product-info">
+        <h2>กระดาษ A4</h2>
+        <p>กระดาษถ่ายเอกสาร A4 คุณภาพดี เหมาะกับเครื่องปริ้นทุกชนิด เนื้อเรียบ ไม่ติด เหมาะกับงานสำนักงานทั่วไป...</p>
+        <div class="price">ราคาเริ่มต้น: 120 บาท / รีม</div>
+        <a class="read-more" href="รายละเอียดA4.html">อ่านต่อ</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="image/gas.jpg" alt="กระดาษกล่องลูกฟูก">
+      <div class="product-info">
+        <h2>กระดาษกล่องลูกฟูก</h2>
+        <p>กระดาษลูกฟูกสำหรับงานบรรจุภัณฑ์ เนื้อหนา แข็งแรง รองรับน้ำหนักสินค้าได้ดี ใช้ทำกล่องขนส่งหรือบรรจุภัณฑ์ต่าง ๆ...</p>
+        <div class="price">ราคาเริ่มต้น: 200 บาท / กก.</div>
+        <a class="read-more" href="รายละเอียดลูกฟูก.html">อ่านต่อ</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==== ส่วนติดต่อ ==== -->
+  <footer>
+    <strong>ติดต่อเรา</strong><br>
+    📱 เบอร์: 0632727919<br>
+    💬 ไลน์: <a href="https://line.me/ti/p/~Bow" target="_blank">-small</a><br>
+    📘 เฟซบุ๊ก: <a href="https://facebook.com/Bow" target="_blank">ณัฐวรา จิมะเร็ง</a>
+  </footer>
+
+  <!-- ==== ปุ่มไลน์ป๊อปอัป ==== -->
+  <a id="line-popup" href="https://line.me/ti/p/~Bow" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670049.png" alt="LINE"> แชทกับเรา
+  </a>
+</body>
+</html>
